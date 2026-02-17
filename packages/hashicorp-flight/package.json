@@ -10,10 +10,14 @@
   },
   "files": [
     "Icon.astro",
+    "BaseIcon.astro",
     "icons.json"
   ],
   "dependencies": {
     "@hashicorp/flight-icons": "^4.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": ["hashicorp", "flight", "icons", "iconify", "astro"],
   "license": "MIT"

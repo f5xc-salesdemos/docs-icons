@@ -7,10 +7,14 @@
     "./Icon.astro": "./Icon.astro"
   },
   "files": [
-    "Icon.astro"
+    "Icon.astro",
+    "BaseIcon.astro"
   ],
   "dependencies": {
     "@iconify-json/tabler": "^1.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": ["tabler", "icons", "iconify", "astro"],
   "license": "MIT"

@@ -7,10 +7,14 @@
     "./Icon.astro": "./Icon.astro"
   },
   "files": [
-    "Icon.astro"
+    "Icon.astro",
+    "BaseIcon.astro"
   ],
   "dependencies": {
     "@iconify-json/ph": "^1.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": ["phosphor", "icons", "iconify", "astro"],
   "license": "MIT"

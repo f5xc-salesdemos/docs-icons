@@ -10,9 +10,13 @@
   },
   "files": [
     "Icon.astro",
+    "BaseIcon.astro",
     "icons.json",
     "svg/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "f5",
     "icons",
