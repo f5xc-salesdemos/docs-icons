@@ -74,6 +74,17 @@ for (const file of files) {
   body = body.replace(/fill="#[Ee]6[Ee]9[Ff]3"/gi, 'fill="var(--color-N200, #e6e9f3)"');
   body = body.replace(/stroke="#[Ee]6[Ee]9[Ff]3"/gi, 'stroke="var(--color-N200, #e6e9f3)"');
 
+  // Preserve fill="none" for stroke-only elements when root SVG had fill="none".
+  // Body extraction strips the root <svg fill="none">, so elements that relied on
+  // inheriting fill="none" would incorrectly get fill="currentColor" from BaseIcon.
+  if (/<svg[^>]*\bfill="none"/.test(raw)) {
+    body = body.replace(/<(path|rect|circle|ellipse|polygon|polyline|line)\b([^>]*?)(\s*\/?>)/gi, (match, tag, attrs, close) => {
+      if (/\bfill\s*=/.test(attrs)) return match;
+      if (!/\bstroke\s*=/.test(attrs)) return match;
+      return `<${tag}${attrs} fill="none"${close}`;
+    });
+  }
+
   // If icon name already exists (e.g. platform from platform.svg and platform-image-464-384.svg),
   // keep the first one (smaller/simpler icon)
   if (icons[name]) {
