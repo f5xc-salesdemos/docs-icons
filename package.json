@@ -1,0 +1,7 @@
+{
+  "name": "docs-icons",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
