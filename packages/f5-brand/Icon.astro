@@ -1,0 +1,15 @@
+---
+import BaseIcon from '../../shared/BaseIcon.astro';
+import iconData from './icons.json';
+
+interface Props {
+  name: string;
+  size?: string;
+  label?: string;
+  class?: string;
+}
+
+const props = Astro.props;
+---
+
+<BaseIcon icons={iconData.icons} defaultWidth={50} defaultHeight={50} {...props} />

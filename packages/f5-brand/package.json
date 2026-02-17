@@ -1,0 +1,24 @@
+{
+  "name": "@f5xc-salesdemos/icons-f5-brand",
+  "version": "0.1.0",
+  "description": "F5 brand icons in Iconify JSON format with Astro component",
+  "type": "module",
+  "exports": {
+    ".": "./icons.json",
+    "./Icon.astro": "./Icon.astro",
+    "./icons.json": "./icons.json"
+  },
+  "files": [
+    "Icon.astro",
+    "icons.json",
+    "svg/"
+  ],
+  "keywords": [
+    "f5",
+    "icons",
+    "iconify",
+    "astro",
+    "svg"
+  ],
+  "license": "MIT"
+}
