@@ -1,0 +1,17 @@
+{
+  "name": "@f5xc-salesdemos/icons-phosphor",
+  "version": "0.1.0",
+  "description": "Phosphor icons with Astro component wrapper",
+  "type": "module",
+  "exports": {
+    "./Icon.astro": "./Icon.astro"
+  },
+  "files": [
+    "Icon.astro"
+  ],
+  "dependencies": {
+    "@iconify-json/ph": "^1.2.0"
+  },
+  "keywords": ["phosphor", "icons", "iconify", "astro"],
+  "license": "MIT"
+}

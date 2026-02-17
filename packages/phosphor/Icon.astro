@@ -1,0 +1,15 @@
+---
+import BaseIcon from '../../shared/BaseIcon.astro';
+import iconData from '@iconify-json/ph/icons.json';
+
+interface Props {
+  name: string;
+  size?: string;
+  label?: string;
+  class?: string;
+}
+
+const props = Astro.props;
+---
+
+<BaseIcon icons={iconData.icons} defaultWidth={256} defaultHeight={256} {...props} />

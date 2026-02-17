@@ -1,0 +1,17 @@
+{
+  "name": "@f5xc-salesdemos/icons-mdi",
+  "version": "0.1.0",
+  "description": "Material Design Icons with Astro component wrapper",
+  "type": "module",
+  "exports": {
+    "./Icon.astro": "./Icon.astro"
+  },
+  "files": [
+    "Icon.astro"
+  ],
+  "dependencies": {
+    "@iconify-json/mdi": "^1.2.0"
+  },
+  "keywords": ["mdi", "material-design", "icons", "iconify", "astro"],
+  "license": "MIT"
+}

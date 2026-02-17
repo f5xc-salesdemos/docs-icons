@@ -1,0 +1,17 @@
+{
+  "name": "@f5xc-salesdemos/icons-carbon",
+  "version": "0.1.0",
+  "description": "Carbon Design icons with Astro component wrapper",
+  "type": "module",
+  "exports": {
+    "./Icon.astro": "./Icon.astro"
+  },
+  "files": [
+    "Icon.astro"
+  ],
+  "dependencies": {
+    "@iconify-json/carbon": "^1.2.0"
+  },
+  "keywords": ["carbon", "ibm", "icons", "iconify", "astro"],
+  "license": "MIT"
+}

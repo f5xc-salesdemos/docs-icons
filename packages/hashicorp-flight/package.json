@@ -1,0 +1,20 @@
+{
+  "name": "@f5xc-salesdemos/icons-hashicorp-flight",
+  "version": "0.1.0",
+  "description": "HashiCorp Flight icons in Iconify JSON format with Astro component",
+  "type": "module",
+  "exports": {
+    ".": "./icons.json",
+    "./Icon.astro": "./Icon.astro",
+    "./icons.json": "./icons.json"
+  },
+  "files": [
+    "Icon.astro",
+    "icons.json"
+  ],
+  "dependencies": {
+    "@hashicorp/flight-icons": "^4.2.0"
+  },
+  "keywords": ["hashicorp", "flight", "icons", "iconify", "astro"],
+  "license": "MIT"
+}
