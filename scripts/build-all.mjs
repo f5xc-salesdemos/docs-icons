@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
 /**
- * Orchestrates build scripts for all icon packages that require them.
+ * Orchestrates build scripts for all icon packages.
  *
- * Packages with build steps:
- * - f5-brand: SVG → Iconify JSON (from local SVGs)
- * - f5xc: SVG → Iconify JSON (from local SVGs)
- * - hashicorp-flight: SVG → Iconify JSON (from @hashicorp/flight-icons)
+ * Custom packages (SVG → Iconify JSON):
+ * - f5-brand: from local SVGs
+ * - f5xc: from local SVGs
+ * - hashicorp-flight: from @hashicorp/flight-icons
  *
- * Iconify wrapper packages (lucide, mdi, carbon, phosphor, tabler) do not
- * need a build step — they import directly from their @iconify-json/* deps.
+ * Wrapper packages (copy icons.json from @iconify-json deps):
+ * - lucide, carbon, mdi, phosphor, tabler
  */
 
 import { execSync } from 'node:child_process';
@@ -23,6 +23,11 @@ const builds = [
   { name: 'f5-brand', script: 'packages/f5-brand/scripts/build.mjs' },
   { name: 'hashicorp-flight', script: 'packages/hashicorp-flight/scripts/build.mjs' },
   { name: 'f5xc', script: 'packages/f5xc/scripts/build.mjs' },
+  { name: 'lucide', script: 'packages/lucide/scripts/build.mjs' },
+  { name: 'carbon', script: 'packages/carbon/scripts/build.mjs' },
+  { name: 'mdi', script: 'packages/mdi/scripts/build.mjs' },
+  { name: 'phosphor', script: 'packages/phosphor/scripts/build.mjs' },
+  { name: 'tabler', script: 'packages/tabler/scripts/build.mjs' },
 ];
 
 let failed = false;

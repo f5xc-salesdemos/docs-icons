@@ -83,6 +83,8 @@ for (const file of files) {
 
 const output = {
   prefix: 'f5-brand',
+  width: 50,
+  height: 50,
   icons,
 };
 
