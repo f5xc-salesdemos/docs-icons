@@ -66,6 +66,8 @@ for (const file of files) {
 
 const output = {
   prefix: 'hashicorp-flight',
+  width: 24,
+  height: 24,
   icons,
 };
 

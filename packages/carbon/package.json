@@ -1,14 +1,17 @@
 {
   "name": "@robinmordasiewicz/icons-carbon",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Carbon Design icons with Astro component wrapper",
   "type": "module",
   "exports": {
-    "./Icon.astro": "./Icon.astro"
+    ".": "./icons.json",
+    "./Icon.astro": "./Icon.astro",
+    "./icons.json": "./icons.json"
   },
   "files": [
     "Icon.astro",
-    "BaseIcon.astro"
+    "BaseIcon.astro",
+    "icons.json"
   ],
   "dependencies": {
     "@iconify-json/carbon": "^1.2.0"

@@ -76,6 +76,8 @@ for (const file of files) {
 
 const output = {
   prefix: 'f5xc',
+  width: 40,
+  height: 40,
   icons,
 };
 
