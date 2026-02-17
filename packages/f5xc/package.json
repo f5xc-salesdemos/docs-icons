@@ -1,0 +1,30 @@
+{
+  "name": "@robinmordasiewicz/icons-f5xc",
+  "version": "0.1.0",
+  "description": "F5 Distributed Cloud (XC) service icons in Iconify JSON format with Astro component",
+  "type": "module",
+  "exports": {
+    ".": "./icons.json",
+    "./Icon.astro": "./Icon.astro",
+    "./icons.json": "./icons.json"
+  },
+  "files": [
+    "Icon.astro",
+    "BaseIcon.astro",
+    "icons.json",
+    "svg/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "f5",
+    "xc",
+    "distributed-cloud",
+    "icons",
+    "iconify",
+    "astro",
+    "svg"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,39 @@
+---
+interface Props {
+  name: string;
+  icons: Record<string, { body: string; width?: number; height?: number }>;
+  defaultWidth?: number;
+  defaultHeight?: number;
+  size?: string;
+  label?: string;
+  class?: string;
+}
+
+const {
+  name,
+  icons,
+  defaultWidth = 24,
+  defaultHeight = 24,
+  size = '1.5em',
+  label,
+  class: className,
+} = Astro.props;
+
+const icon = icons[name];
+if (!icon) {
+  throw new Error(`Unknown icon "${name}". Available icons: ${Object.keys(icons).slice(0, 10).join(', ')}...`);
+}
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox={`0 0 ${icon.width || defaultWidth} ${icon.height || defaultHeight}`}
+  width={size}
+  height={size}
+  fill="currentColor"
+  class:list={[className]}
+  aria-hidden={label ? undefined : 'true'}
+  aria-label={label}
+  role={label ? 'img' : undefined}
+  set:html={icon.body}
+/>
