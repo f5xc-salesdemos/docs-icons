@@ -40,3 +40,16 @@ jobs:
           done
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  dispatch:
+    name: Trigger docs-builder image rebuild
+    needs: publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch rebuild-image to docs-builder
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        run: |
+          gh api repos/f5xc-salesdemos/docs-builder/dispatches \
+            --method POST \
+            --field event_type=rebuild-image
