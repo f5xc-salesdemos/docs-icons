@@ -1,0 +1,17 @@
+{
+  "name": "@f5xc-salesdemos/icons-tabler",
+  "version": "0.1.0",
+  "description": "Tabler icons with Astro component wrapper",
+  "type": "module",
+  "exports": {
+    "./Icon.astro": "./Icon.astro"
+  },
+  "files": [
+    "Icon.astro"
+  ],
+  "dependencies": {
+    "@iconify-json/tabler": "^1.2.0"
+  },
+  "keywords": ["tabler", "icons", "iconify", "astro"],
+  "license": "MIT"
+}

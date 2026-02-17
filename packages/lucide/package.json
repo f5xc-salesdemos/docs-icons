@@ -1,0 +1,17 @@
+{
+  "name": "@f5xc-salesdemos/icons-lucide",
+  "version": "0.1.0",
+  "description": "Lucide icons with Astro component wrapper",
+  "type": "module",
+  "exports": {
+    "./Icon.astro": "./Icon.astro"
+  },
+  "files": [
+    "Icon.astro"
+  ],
+  "dependencies": {
+    "@iconify-json/lucide": "^1.2.0"
+  },
+  "keywords": ["lucide", "icons", "iconify", "astro"],
+  "license": "MIT"
+}
