@@ -13,3 +13,30 @@ const props = Astro.props;
 ---
 
 <BaseIcon icons={iconData.icons} defaultWidth={24} defaultHeight={24} {...props} />
+
+<style is:global>
+  :root {
+    --color-N600: #0f1e57;
+    --color-brand: #e4002b;
+    --color-blue-light: #e5eaff;
+    --color-N200: #e6e9f3;
+  }
+  [data-theme='light'] {
+    --color-N600: #0f1e57;
+    --color-brand: #e4002b;
+    --color-blue-light: #e5eaff;
+    --color-N200: #e6e9f3;
+  }
+  :root:not([data-theme='light']) {
+    --color-N600: #e5eaff;
+    --color-blue-light: #0e41aa;
+    --color-N200: #1a2a6c;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme]) {
+      --color-N600: #0f1e57;
+      --color-blue-light: #e5eaff;
+      --color-N200: #e6e9f3;
+    }
+  }
+</style>

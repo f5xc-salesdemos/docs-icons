@@ -64,6 +64,16 @@ for (const file of files) {
   body = body.replace(/stroke="#0{3,6}"/gi, 'stroke="currentColor"');
   body = body.replace(/stroke="#222"/gi, 'stroke="currentColor"');
 
+  // Replace brand colors with CSS custom properties for theme adaptability
+  body = body.replace(/fill="#0[Ff]1[Ee]57"/gi, 'fill="var(--color-N600, #0f1e57)"');
+  body = body.replace(/stroke="#0[Ff]1[Ee]57"/gi, 'stroke="var(--color-N600, #0f1e57)"');
+  body = body.replace(/fill="#[Ee]4002[Bb]"/gi, 'fill="var(--color-brand, #e4002b)"');
+  body = body.replace(/stroke="#[Ee]4002[Bb]"/gi, 'stroke="var(--color-brand, #e4002b)"');
+  body = body.replace(/fill="#[Ee]5[Ee][Aa][Ff][Ff]"/gi, 'fill="var(--color-blue-light, #e5eaff)"');
+  body = body.replace(/stroke="#[Ee]5[Ee][Aa][Ff][Ff]"/gi, 'stroke="var(--color-blue-light, #e5eaff)"');
+  body = body.replace(/fill="#[Ee]6[Ee]9[Ff]3"/gi, 'fill="var(--color-N200, #e6e9f3)"');
+  body = body.replace(/stroke="#[Ee]6[Ee]9[Ff]3"/gi, 'stroke="var(--color-N200, #e6e9f3)"');
+
   // If icon name already exists (e.g. platform from platform.svg and platform-image-464-384.svg),
   // keep the first one (smaller/simpler icon)
   if (icons[name]) {
