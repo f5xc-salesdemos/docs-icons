@@ -1,6 +1,6 @@
 {
   "name": "@robinmordasiewicz/icons-f5xc",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "F5 Distributed Cloud (XC) service icons in Iconify JSON format with Astro component",
   "type": "module",
   "exports": {
