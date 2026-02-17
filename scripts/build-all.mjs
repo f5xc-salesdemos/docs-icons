@@ -5,6 +5,7 @@
  *
  * Packages with build steps:
  * - f5-brand: SVG → Iconify JSON (from local SVGs)
+ * - f5xc: SVG → Iconify JSON (from local SVGs)
  * - hashicorp-flight: SVG → Iconify JSON (from @hashicorp/flight-icons)
  *
  * Iconify wrapper packages (lucide, mdi, carbon, phosphor, tabler) do not
@@ -21,6 +22,7 @@ const root = join(__dirname, '..');
 const builds = [
   { name: 'f5-brand', script: 'packages/f5-brand/scripts/build.mjs' },
   { name: 'hashicorp-flight', script: 'packages/hashicorp-flight/scripts/build.mjs' },
+  { name: 'f5xc', script: 'packages/f5xc/scripts/build.mjs' },
 ];
 
 let failed = false;
