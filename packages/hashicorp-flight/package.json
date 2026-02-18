@@ -1,6 +1,6 @@
 {
   "name": "@robinmordasiewicz/icons-hashicorp-flight",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "HashiCorp Flight icons in Iconify JSON format with Astro component",
   "type": "module",
   "exports": {
