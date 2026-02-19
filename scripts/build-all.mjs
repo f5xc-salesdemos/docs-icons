@@ -9,7 +9,7 @@
  * - hashicorp-flight: from @hashicorp/flight-icons
  *
  * Wrapper packages (copy icons.json from @iconify-json deps):
- * - lucide, carbon, mdi, phosphor, tabler
+ * - lucide, carbon, mdi, phosphor, tabler, simple-icons
  */
 
 import { execSync } from 'node:child_process';
@@ -28,6 +28,7 @@ const builds = [
   { name: 'mdi', script: 'packages/mdi/scripts/build.mjs' },
   { name: 'phosphor', script: 'packages/phosphor/scripts/build.mjs' },
   { name: 'tabler', script: 'packages/tabler/scripts/build.mjs' },
+  { name: 'simple-icons', script: 'packages/simple-icons/scripts/build.mjs' },
 ];
 
 let failed = false;
