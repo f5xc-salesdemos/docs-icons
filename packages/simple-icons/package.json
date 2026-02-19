@@ -1,0 +1,24 @@
+{
+  "name": "@robinmordasiewicz/icons-simple-icons",
+  "version": "0.1.0",
+  "description": "Simple Icons brand icons in Iconify JSON format with Astro component",
+  "type": "module",
+  "exports": {
+    ".": "./icons.json",
+    "./Icon.astro": "./Icon.astro",
+    "./icons.json": "./icons.json"
+  },
+  "files": [
+    "Icon.astro",
+    "BaseIcon.astro",
+    "icons.json"
+  ],
+  "dependencies": {
+    "@iconify-json/simple-icons": "^1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": ["simple-icons", "brands", "icons", "iconify", "astro"],
+  "license": "MIT"
+}
