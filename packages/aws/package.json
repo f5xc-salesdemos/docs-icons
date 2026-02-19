@@ -1,0 +1,21 @@
+{
+  "name": "@robinmordasiewicz/icons-aws",
+  "version": "0.1.0",
+  "description": "AWS architecture icons in Iconify JSON format with Astro component",
+  "type": "module",
+  "exports": {
+    ".": "./icons.json",
+    "./Icon.astro": "./Icon.astro",
+    "./icons.json": "./icons.json"
+  },
+  "files": [
+    "Icon.astro",
+    "BaseIcon.astro",
+    "icons.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": ["aws", "amazon", "cloud", "architecture", "icons", "iconify", "astro"],
+  "license": "CC-BY-ND-2.0"
+}

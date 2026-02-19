@@ -1,0 +1,155 @@
+---
+title: Cloud Architecture Icons
+description: AWS, Azure, and GCP color service icons for cloud infrastructure diagrams and documentation.
+sidebar:
+  label: Cloud Icons
+  order: 8
+---
+
+import AwsIcon from '@robinmordasiewicz/icons-aws/Icon.astro';
+import AzureIcon from '@robinmordasiewicz/icons-azure/Icon.astro';
+import GcpIcon from '@robinmordasiewicz/icons-gcp/Icon.astro';
+
+Three icon packs provide color service icons for documenting cloud infrastructure. Unlike monochrome icon packs, these preserve original vendor colors for architecture diagrams.
+
+## Usage
+
+```astro
+---
+import AwsIcon from '@robinmordasiewicz/icons-aws/Icon.astro';
+import AzureIcon from '@robinmordasiewicz/icons-azure/Icon.astro';
+import GcpIcon from '@robinmordasiewicz/icons-gcp/Icon.astro';
+---
+
+<AwsIcon name="lambda" />
+<AzureIcon name="virtual-machine" />
+<GcpIcon name="cloud-storage" />
+```
+
+## AWS Architecture Icons
+
+885 color icons from [AWS Icons for Architecture Diagrams](https://aws.amazon.com/architecture/icons/). Default 48x48 with per-icon size overrides.
+
+### Compute
+
+<div class="not-content icon-grid" style="grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));">
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="ec2" size="1.5rem" /></div><div class="icon-card-label">ec2</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="lambda" size="1.5rem" /></div><div class="icon-card-label">lambda</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="elastic-container-service" size="1.5rem" /></div><div class="icon-card-label">elastic-container-service</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="elastic-kubernetes-service" size="1.5rem" /></div><div class="icon-card-label">elastic-kubernetes-service</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="fargate" size="1.5rem" /></div><div class="icon-card-label">fargate</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="ec2-auto-scaling" size="1.5rem" /></div><div class="icon-card-label">ec2-auto-scaling</div></div>
+</div>
+
+### Networking
+
+<div class="not-content icon-grid" style="grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));">
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="vpc" size="1.5rem" /></div><div class="icon-card-label">vpc</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="cloudfront" size="1.5rem" /></div><div class="icon-card-label">cloudfront</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="route-53" size="1.5rem" /></div><div class="icon-card-label">route-53</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="elastic-load-balancing" size="1.5rem" /></div><div class="icon-card-label">elastic-load-balancing</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="api-gateway" size="1.5rem" /></div><div class="icon-card-label">api-gateway</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="app-mesh" size="1.5rem" /></div><div class="icon-card-label">app-mesh</div></div>
+</div>
+
+### Storage and Database
+
+<div class="not-content icon-grid" style="grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));">
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="simple-storage-service" size="1.5rem" /></div><div class="icon-card-label">simple-storage-service</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="dynamodb" size="1.5rem" /></div><div class="icon-card-label">dynamodb</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="aurora" size="1.5rem" /></div><div class="icon-card-label">aurora</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="elasticache" size="1.5rem" /></div><div class="icon-card-label">elasticache</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="redshift" size="1.5rem" /></div><div class="icon-card-label">redshift</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="elastic-block-store" size="1.5rem" /></div><div class="icon-card-label">elastic-block-store</div></div>
+</div>
+
+### Security
+
+<div class="not-content icon-grid" style="grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));">
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="waf" size="1.5rem" /></div><div class="icon-card-label">waf</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="shield" size="1.5rem" /></div><div class="icon-card-label">shield</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="cognito" size="1.5rem" /></div><div class="icon-card-label">cognito</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="iam-identity-center" size="1.5rem" /></div><div class="icon-card-label">iam-identity-center</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="certificate-manager" size="1.5rem" /></div><div class="icon-card-label">certificate-manager</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AwsIcon name="secrets-manager" size="1.5rem" /></div><div class="icon-card-label">secrets-manager</div></div>
+</div>
+
+## Azure Architecture Icons
+
+606 color icons from [Microsoft Azure Architecture Icons](https://learn.microsoft.com/en-us/azure/architecture/icons/). Default 18x18 with gradient fills.
+
+### Compute
+
+<div class="not-content icon-grid" style="grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));">
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="virtual-machine" size="1.5rem" /></div><div class="icon-card-label">virtual-machine</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="function-apps" size="1.5rem" /></div><div class="icon-card-label">function-apps</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="kubernetes-services" size="1.5rem" /></div><div class="icon-card-label">kubernetes-services</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="app-services" size="1.5rem" /></div><div class="icon-card-label">app-services</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="container-instances" size="1.5rem" /></div><div class="icon-card-label">container-instances</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="container-registries" size="1.5rem" /></div><div class="icon-card-label">container-registries</div></div>
+</div>
+
+### Networking
+
+<div class="not-content icon-grid" style="grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));">
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="load-balancers" size="1.5rem" /></div><div class="icon-card-label">load-balancers</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="application-gateways" size="1.5rem" /></div><div class="icon-card-label">application-gateways</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="virtual-networks" size="1.5rem" /></div><div class="icon-card-label">virtual-networks</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="dns-zones" size="1.5rem" /></div><div class="icon-card-label">dns-zones</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="front-door-and-cdn-profiles" size="1.5rem" /></div><div class="icon-card-label">front-door-and-cdn-profiles</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="firewalls" size="1.5rem" /></div><div class="icon-card-label">firewalls</div></div>
+</div>
+
+### Data and Storage
+
+<div class="not-content icon-grid" style="grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));">
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="storage-accounts" size="1.5rem" /></div><div class="icon-card-label">storage-accounts</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="azure-cosmos-db" size="1.5rem" /></div><div class="icon-card-label">azure-cosmos-db</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="cache-redis" size="1.5rem" /></div><div class="icon-card-label">cache-redis</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="azure-database-mysql-server" size="1.5rem" /></div><div class="icon-card-label">azure-database-mysql-server</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="azure-database-postgresql-server" size="1.5rem" /></div><div class="icon-card-label">azure-database-postgresql-server</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><AzureIcon name="key-vaults" size="1.5rem" /></div><div class="icon-card-label">key-vaults</div></div>
+</div>
+
+## GCP Architecture Icons
+
+216 color icons from [Google Cloud Architecture Icons](https://cloud.google.com/icons). Default 24x24 with inline fills.
+
+### Compute
+
+<div class="not-content icon-grid" style="grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));">
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="compute-engine" size="1.5rem" /></div><div class="icon-card-label">compute-engine</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="cloud-run" size="1.5rem" /></div><div class="icon-card-label">cloud-run</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="cloud-functions" size="1.5rem" /></div><div class="icon-card-label">cloud-functions</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="google-kubernetes-engine" size="1.5rem" /></div><div class="icon-card-label">google-kubernetes-engine</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="app-engine" size="1.5rem" /></div><div class="icon-card-label">app-engine</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="anthos" size="1.5rem" /></div><div class="icon-card-label">anthos</div></div>
+</div>
+
+### Networking
+
+<div class="not-content icon-grid" style="grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));">
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="cloud-load-balancing" size="1.5rem" /></div><div class="icon-card-label">cloud-load-balancing</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="cloud-cdn" size="1.5rem" /></div><div class="icon-card-label">cloud-cdn</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="cloud-dns" size="1.5rem" /></div><div class="icon-card-label">cloud-dns</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="cloud-armor" size="1.5rem" /></div><div class="icon-card-label">cloud-armor</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="virtual-private-cloud" size="1.5rem" /></div><div class="icon-card-label">virtual-private-cloud</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="cloud-nat" size="1.5rem" /></div><div class="icon-card-label">cloud-nat</div></div>
+</div>
+
+### Data and Storage
+
+<div class="not-content icon-grid" style="grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));">
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="cloud-storage" size="1.5rem" /></div><div class="icon-card-label">cloud-storage</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="bigquery" size="1.5rem" /></div><div class="icon-card-label">bigquery</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="cloud-spanner" size="1.5rem" /></div><div class="icon-card-label">cloud-spanner</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="cloud-sql" size="1.5rem" /></div><div class="icon-card-label">cloud-sql</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="bigtable" size="1.5rem" /></div><div class="icon-card-label">bigtable</div></div>
+  <div class="icon-card"><div class="icon-card-image no-invert" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><GcpIcon name="pubsub" size="1.5rem" /></div><div class="icon-card-label">pubsub</div></div>
+</div>
+
+## Color Rendering
+
+These icon packs use original vendor colors (not `currentColor`). The `no-invert` class on icon cards preserves colors in dark mode. When using these icons outside of the grid layout, no special handling is needed — colors are embedded in the SVG markup.
+
+Browse full icon sets: [AWS Icons](https://aws.amazon.com/architecture/icons/) | [Azure Icons](https://learn.microsoft.com/en-us/azure/architecture/icons/) | [GCP Icons](https://cloud.google.com/icons)
