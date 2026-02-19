@@ -7,9 +7,14 @@
  * - f5-brand: from local SVGs
  * - f5xc: from local SVGs
  * - hashicorp-flight: from @hashicorp/flight-icons
+ * - gcp: from AwesomeLogos/google-cloud-icons GitHub SVGs
  *
- * Wrapper packages (copy icons.json from @iconify-json deps):
+ * Wrapper packages (copy/transform icons.json from deps):
  * - lucide, carbon, mdi, phosphor, tabler, simple-icons
+ * - azure: from azureiconkento npm (with gradient ID namespacing)
+ *
+ * Fetched packages (pre-built Iconify JSON from GitHub):
+ * - aws: from awslabs/aws-icons-for-plantuml
  */
 
 import { execSync } from 'node:child_process';
@@ -29,6 +34,9 @@ const builds = [
   { name: 'phosphor', script: 'packages/phosphor/scripts/build.mjs' },
   { name: 'tabler', script: 'packages/tabler/scripts/build.mjs' },
   { name: 'simple-icons', script: 'packages/simple-icons/scripts/build.mjs' },
+  { name: 'aws', script: 'packages/aws/scripts/build.mjs' },
+  { name: 'azure', script: 'packages/azure/scripts/build.mjs' },
+  { name: 'gcp', script: 'packages/gcp/scripts/build.mjs' },
 ];
 
 let failed = false;

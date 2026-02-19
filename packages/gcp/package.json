@@ -1,0 +1,21 @@
+{
+  "name": "@robinmordasiewicz/icons-gcp",
+  "version": "0.1.0",
+  "description": "Google Cloud architecture icons in Iconify JSON format with Astro component",
+  "type": "module",
+  "exports": {
+    ".": "./icons.json",
+    "./Icon.astro": "./Icon.astro",
+    "./icons.json": "./icons.json"
+  },
+  "files": [
+    "Icon.astro",
+    "BaseIcon.astro",
+    "icons.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": ["gcp", "google-cloud", "cloud", "architecture", "icons", "iconify", "astro"],
+  "license": "Apache-2.0"
+}
