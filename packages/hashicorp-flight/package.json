@@ -19,6 +19,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": ["hashicorp", "flight", "icons", "iconify", "astro"],
+  "keywords": [
+    "hashicorp",
+    "flight",
+    "icons",
+    "iconify",
+    "astro"
+  ],
   "license": "MIT"
 }

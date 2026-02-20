@@ -19,6 +19,14 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": ["azure", "microsoft", "cloud", "architecture", "icons", "iconify", "astro"],
+  "keywords": [
+    "azure",
+    "microsoft",
+    "cloud",
+    "architecture",
+    "icons",
+    "iconify",
+    "astro"
+  ],
   "license": "MIT"
 }

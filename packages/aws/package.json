@@ -16,6 +16,14 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": ["aws", "amazon", "cloud", "architecture", "icons", "iconify", "astro"],
+  "keywords": [
+    "aws",
+    "amazon",
+    "cloud",
+    "architecture",
+    "icons",
+    "iconify",
+    "astro"
+  ],
   "license": "CC-BY-ND-2.0"
 }
