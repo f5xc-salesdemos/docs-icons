@@ -9,11 +9,11 @@ interface Props {
   class?: string;
 }
 
-const { name, icons, defaultWidth = 24, defaultHeight = 24, size = "1.5em", label, class: className } = Astro.props;
+const { name, icons, defaultWidth = 24, defaultHeight = 24, size = '1.5em', label, class: className } = Astro.props;
 
 const icon = icons[name];
 if (!icon) {
-  throw new Error(`Unknown icon "${name}". Available icons: ${Object.keys(icons).slice(0, 10).join(", ")}...`);
+  throw new Error(`Unknown icon "${name}". Available icons: ${Object.keys(icons).slice(0, 10).join(', ')}...`);
 }
 ---
 
