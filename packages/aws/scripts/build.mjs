@@ -41,7 +41,7 @@ function fetch(href) {
 const raw = await fetch(url);
 const data = JSON.parse(raw);
 
-writeFileSync(outFile, JSON.stringify(data, null, 2));
+writeFileSync(outFile, JSON.stringify(data, null, 2) + '\n');
 
 const count = Object.keys(data.icons).length;
 console.log(`Fetched ${count} AWS icons → ${outFile}`);

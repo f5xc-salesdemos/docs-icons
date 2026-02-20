@@ -17,7 +17,7 @@ import TablerIcon from '@f5xc-salesdemos/icons-tabler/Icon.astro';
 ## Props
 
 | Prop | Type | Default | Description |
-|------|------|---------|-------------|
+| ------ | ------ | --------- | ------------- |
 | `name` | `string` | — | **Required.** Tabler icon name |
 | `size` | `string` | `'1.5em'` | Width and height |
 | `label` | `string` | — | Accessible label |

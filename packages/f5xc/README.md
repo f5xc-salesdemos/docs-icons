@@ -5,7 +5,7 @@ F5 Distributed Cloud (XC) service icons in Iconify JSON format with an Astro com
 ## Icons (30)
 
 | Icon Name | Description |
-|---|---|
+| --- | --- |
 | `account-protection` | Account Protection |
 | `administration` | Administration |
 | `ai_assistant_logo` | AI Assistant |

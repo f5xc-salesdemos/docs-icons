@@ -197,7 +197,7 @@ const output = {
   icons,
 };
 
-writeFileSync(outFile, JSON.stringify(output, null, 2));
+writeFileSync(outFile, JSON.stringify(output, null, 2) + '\n');
 
 const count = Object.keys(icons).length;
 console.log(`Built ${count} GCP icons → ${outFile}`);
