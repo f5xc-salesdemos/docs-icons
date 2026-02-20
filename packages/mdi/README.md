@@ -17,7 +17,7 @@ import MdiIcon from '@f5xc-salesdemos/icons-mdi/Icon.astro';
 ## Props
 
 | Prop | Type | Default | Description |
-|------|------|---------|-------------|
+| ------ | ------ | --------- | ------------- |
 | `name` | `string` | — | **Required.** MDI icon name |
 | `size` | `string` | `'1.5em'` | Width and height |
 | `label` | `string` | — | Accessible label |

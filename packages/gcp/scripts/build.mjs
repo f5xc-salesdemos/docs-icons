@@ -10,33 +10,34 @@
  * - License: Apache-2.0
  */
 
-import { writeFileSync, mkdtempSync, rmSync, readFileSync, readdirSync, statSync } from 'node:fs';
-import { dirname, join, basename } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { tmpdir } from 'node:os';
-import https from 'node:https';
-import { execSync } from 'node:child_process';
+import { writeFileSync, mkdtempSync, rmSync, readFileSync, readdirSync, statSync } from "node:fs";
+import { dirname, join, basename } from "node:path";
+import { fileURLToPath } from "node:url";
+import { tmpdir } from "node:os";
+import https from "node:https";
+import { execSync } from "node:child_process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const outFile = join(__dirname, '..', 'icons.json');
+const outFile = join(__dirname, "..", "icons.json");
 
-const zipUrl =
-  'https://github.com/AwesomeLogos/google-cloud-icons/archive/refs/heads/main.zip';
+const zipUrl = "https://github.com/AwesomeLogos/google-cloud-icons/archive/refs/heads/main.zip";
 
 function fetch(href) {
   return new Promise((resolve, reject) => {
-    https.get(href, { headers: { 'User-Agent': 'docs-icons-build' } }, (res) => {
-      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        return fetch(res.headers.location).then(resolve, reject);
-      }
-      if (res.statusCode !== 200) {
-        return reject(new Error(`HTTP ${res.statusCode} for ${href}`));
-      }
-      const chunks = [];
-      res.on('data', (c) => chunks.push(c));
-      res.on('end', () => resolve(Buffer.concat(chunks)));
-      res.on('error', reject);
-    }).on('error', reject);
+    https
+      .get(href, { headers: { "User-Agent": "docs-icons-build" } }, (res) => {
+        if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+          return fetch(res.headers.location).then(resolve, reject);
+        }
+        if (res.statusCode !== 200) {
+          return reject(new Error(`HTTP ${res.statusCode} for ${href}`));
+        }
+        const chunks = [];
+        res.on("data", (c) => chunks.push(c));
+        res.on("end", () => resolve(Buffer.concat(chunks)));
+        res.on("error", reject);
+      })
+      .on("error", reject);
   });
 }
 
@@ -54,8 +55,8 @@ function parseStyleBlock(styleContent) {
 
     // Parse all declarations into property map
     const props = {};
-    for (const decl of declarations.split(';')) {
-      const colonIdx = decl.indexOf(':');
+    for (const decl of declarations.split(";")) {
+      const colonIdx = decl.indexOf(":");
       if (colonIdx === -1) continue;
       const prop = decl.slice(0, colonIdx).trim();
       const val = decl.slice(colonIdx + 1).trim();
@@ -64,7 +65,7 @@ function parseStyleBlock(styleContent) {
 
     if (Object.keys(props).length === 0) continue;
 
-    for (const sel of selectors.split(',')) {
+    for (const sel of selectors.split(",")) {
       const clsMatch = sel.trim().match(/^\.([\w-]+)$/);
       if (clsMatch) {
         mappings[clsMatch[1]] = props;
@@ -95,62 +96,62 @@ function inlineStyles(svgContent) {
     // Build inline attribute string from CSS properties
     const attrs = Object.entries(props)
       .map(([prop, val]) => `${prop}="${val}"`)
-      .join(' ');
+      .join(" ");
 
     // Handle class="cls-N" (single class)
-    result = result.replace(
-      new RegExp(`class="${cls}"`, 'g'),
-      attrs
-    );
+    result = result.replace(new RegExp(`class="${cls}"`, "g"), attrs);
     // Handle class="cls-N cls-M" (multiple classes)
-    result = result.replace(
-      new RegExp(`class="([^"]*\\b)${cls}(\\b[^"]*)"`, 'g'),
-      (match, before, after) => {
-        const remaining = `${before}${after}`.trim();
-        if (remaining) {
-          return `${attrs} class="${remaining}"`;
-        }
-        return attrs;
+    result = result.replace(new RegExp(`class="([^"]*\\b)${cls}(\\b[^"]*)"`, "g"), (match, before, after) => {
+      const remaining = `${before}${after}`.trim();
+      if (remaining) {
+        return `${attrs} class="${remaining}"`;
       }
-    );
+      return attrs;
+    });
   }
 
   // Remove <style> block (and containing <defs> if it only holds <style>)
-  result = result.replace(/<defs>\s*<style[^>]*>[\s\S]*?<\/style>\s*<\/defs>/gi, '');
-  result = result.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '');
+  result = result.replace(/<defs>\s*<style[^>]*>[\s\S]*?<\/style>\s*<\/defs>/gi, "");
+  result = result.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "");
 
   return result;
 }
 
-console.log('Downloading GCP icon archive...');
+console.log("Downloading GCP icon archive...");
 const zipBuffer = await fetch(zipUrl);
 
-const tmpDir = mkdtempSync(join(tmpdir(), 'gcp-icons-'));
-const zipFile = join(tmpDir, 'gcp-icons.zip');
+const tmpDir = mkdtempSync(join(tmpdir(), "gcp-icons-"));
+const zipFile = join(tmpDir, "gcp-icons.zip");
 writeFileSync(zipFile, zipBuffer);
 
 execSync(`unzip -q "${zipFile}" -d "${tmpDir}"`);
 
 // Find the extracted directory
 const extractedDir = readdirSync(tmpDir).find((d) => {
-  try { return statSync(join(tmpDir, d)).isDirectory() && d.startsWith('google-cloud-icons'); } catch { return false; }
+  try {
+    return statSync(join(tmpDir, d)).isDirectory() && d.startsWith("google-cloud-icons");
+  } catch {
+    return false;
+  }
 });
 
 if (!extractedDir) {
-  console.error('Could not find extracted directory');
+  console.error("Could not find extracted directory");
   rmSync(tmpDir, { recursive: true });
   process.exit(1);
 }
 
 // SVGs are flat files in docs/images/
-const imagesDir = join(tmpDir, extractedDir, 'docs', 'images');
-const svgFiles = readdirSync(imagesDir).filter((f) => f.endsWith('.svg')).sort();
+const imagesDir = join(tmpDir, extractedDir, "docs", "images");
+const svgFiles = readdirSync(imagesDir)
+  .filter((f) => f.endsWith(".svg"))
+  .sort();
 
 const icons = {};
 const skipped = [];
 
 for (const file of svgFiles) {
-  const raw = readFileSync(join(imagesDir, file), 'utf8');
+  const raw = readFileSync(join(imagesDir, file), "utf8");
 
   // Inline CSS styles to prevent cross-icon class conflicts
   const processed = inlineStyles(raw);
@@ -177,7 +178,7 @@ for (const file of svgFiles) {
   const body = bodyMatch[1].trim();
 
   // Derive icon name: strip .svg, underscores → hyphens, lowercase
-  const name = basename(file, '.svg').replace(/_/g, '-').toLowerCase();
+  const name = basename(file, ".svg").replace(/_/g, "-").toLowerCase();
 
   if (icons[name]) {
     console.log(`SKIP duplicate name "${name}" from ${file}`);
@@ -191,16 +192,16 @@ for (const file of svgFiles) {
 rmSync(tmpDir, { recursive: true });
 
 const output = {
-  prefix: 'gcp',
+  prefix: "gcp",
   width: 24,
   height: 24,
   icons,
 };
 
-writeFileSync(outFile, JSON.stringify(output, null, 2));
+writeFileSync(outFile, JSON.stringify(output, null, 2) + "\n");
 
 const count = Object.keys(icons).length;
 console.log(`Built ${count} GCP icons → ${outFile}`);
 if (skipped.length > 0) {
-  console.log(`Skipped ${skipped.length}: ${skipped.join(', ')}`);
+  console.log(`Skipped ${skipped.length}: ${skipped.join(", ")}`);
 }

@@ -5,15 +5,16 @@
  * so it can be exported alongside Icon.astro.
  */
 
-import { copyFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { createRequire } from 'node:module';
+import { readFileSync, writeFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { createRequire } from "node:module";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const require = createRequire(import.meta.url);
-const source = require.resolve('@iconify-json/mdi/icons.json');
-const dest = join(__dirname, '..', 'icons.json');
+const source = require.resolve("@iconify-json/mdi/icons.json");
+const dest = join(__dirname, "..", "icons.json");
 
-copyFileSync(source, dest);
+const data = JSON.parse(readFileSync(source, "utf8"));
+writeFileSync(dest, JSON.stringify(data, null, 2) + "\n");
 console.log(`Copied mdi icons.json → ${dest}`);

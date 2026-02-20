@@ -19,6 +19,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": ["simple-icons", "brands", "icons", "iconify", "astro"],
+  "keywords": [
+    "simple-icons",
+    "brands",
+    "icons",
+    "iconify",
+    "astro"
+  ],
   "license": "MIT"
 }

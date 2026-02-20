@@ -19,6 +19,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": ["carbon", "ibm", "icons", "iconify", "astro"],
+  "keywords": [
+    "carbon",
+    "ibm",
+    "icons",
+    "iconify",
+    "astro"
+  ],
   "license": "MIT"
 }

@@ -23,7 +23,7 @@ import FlightIcon from '@f5xc-salesdemos/icons-hashicorp-flight/Icon.astro';
 ## Props
 
 | Prop | Type | Default | Description |
-|------|------|---------|-------------|
+| ------ | ------ | --------- | ------------- |
 | `name` | `string` | — | **Required.** Flight icon name (without `-24` suffix) |
 | `size` | `string` | `'1.5em'` | Width and height |
 | `label` | `string` | — | Accessible label |

@@ -17,26 +17,26 @@
  * - aws: from awslabs/aws-icons-for-plantuml
  */
 
-import { execSync } from 'node:child_process';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { execSync } from "node:child_process";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const root = join(__dirname, '..');
+const root = join(__dirname, "..");
 
 const builds = [
-  { name: 'f5-brand', script: 'packages/f5-brand/scripts/build.mjs' },
-  { name: 'hashicorp-flight', script: 'packages/hashicorp-flight/scripts/build.mjs' },
-  { name: 'f5xc', script: 'packages/f5xc/scripts/build.mjs' },
-  { name: 'lucide', script: 'packages/lucide/scripts/build.mjs' },
-  { name: 'carbon', script: 'packages/carbon/scripts/build.mjs' },
-  { name: 'mdi', script: 'packages/mdi/scripts/build.mjs' },
-  { name: 'phosphor', script: 'packages/phosphor/scripts/build.mjs' },
-  { name: 'tabler', script: 'packages/tabler/scripts/build.mjs' },
-  { name: 'simple-icons', script: 'packages/simple-icons/scripts/build.mjs' },
-  { name: 'aws', script: 'packages/aws/scripts/build.mjs' },
-  { name: 'azure', script: 'packages/azure/scripts/build.mjs' },
-  { name: 'gcp', script: 'packages/gcp/scripts/build.mjs' },
+  { name: "f5-brand", script: "packages/f5-brand/scripts/build.mjs" },
+  { name: "hashicorp-flight", script: "packages/hashicorp-flight/scripts/build.mjs" },
+  { name: "f5xc", script: "packages/f5xc/scripts/build.mjs" },
+  { name: "lucide", script: "packages/lucide/scripts/build.mjs" },
+  { name: "carbon", script: "packages/carbon/scripts/build.mjs" },
+  { name: "mdi", script: "packages/mdi/scripts/build.mjs" },
+  { name: "phosphor", script: "packages/phosphor/scripts/build.mjs" },
+  { name: "tabler", script: "packages/tabler/scripts/build.mjs" },
+  { name: "simple-icons", script: "packages/simple-icons/scripts/build.mjs" },
+  { name: "aws", script: "packages/aws/scripts/build.mjs" },
+  { name: "azure", script: "packages/azure/scripts/build.mjs" },
+  { name: "gcp", script: "packages/gcp/scripts/build.mjs" },
 ];
 
 let failed = false;
@@ -44,7 +44,7 @@ let failed = false;
 for (const { name, script } of builds) {
   console.log(`\n--- Building ${name} ---`);
   try {
-    execSync(`node ${join(root, script)}`, { stdio: 'inherit', cwd: root });
+    execSync(`node ${join(root, script)}`, { stdio: "inherit", cwd: root });
   } catch (err) {
     console.error(`FAILED: ${name}`);
     failed = true;
@@ -52,8 +52,8 @@ for (const { name, script } of builds) {
 }
 
 if (failed) {
-  console.error('\nSome builds failed.');
+  console.error("\nSome builds failed.");
   process.exit(1);
 } else {
-  console.log('\nAll builds succeeded.');
+  console.log("\nAll builds succeeded.");
 }

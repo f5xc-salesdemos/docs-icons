@@ -16,6 +16,14 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": ["gcp", "google-cloud", "cloud", "architecture", "icons", "iconify", "astro"],
+  "keywords": [
+    "gcp",
+    "google-cloud",
+    "cloud",
+    "architecture",
+    "icons",
+    "iconify",
+    "astro"
+  ],
   "license": "Apache-2.0"
 }
