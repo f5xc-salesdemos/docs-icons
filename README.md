@@ -1,7 +1,7 @@
 # Docs Icons
 
 [![GitHub Pages Deploy](https://github.com/f5xc-salesdemos/docs-icons/actions/workflows/github-pages-deploy.yml/badge.svg)](https://github.com/f5xc-salesdemos/docs-icons/actions/workflows/github-pages-deploy.yml)
-[![Repo Settings](https://github.com/f5xc-salesdemos/docs-icons/actions/workflows/enforce-repo-settings.yml/badge.svg)](https://github.com/f5xc-salesdemos/docs-icons/actions/workflows/enforce-repo-settings.yml)
+[![Repository Settings](https://github.com/f5xc-salesdemos/docs-icons/actions/workflows/enforce-repo-settings.yml/badge.svg)](https://github.com/f5xc-salesdemos/docs-icons/actions/workflows/enforce-repo-settings.yml)
 [![License](https://img.shields.io/github/license/f5xc-salesdemos/docs-icons)](LICENSE)
 
 NPM icon packages and plugins for the F5 XC documentation build system
