@@ -1,7 +1,7 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
   "files": {
-    "maxSize": 3145728
+    "maxSize": 5242880
   },
   "formatter": {
     "indentStyle": "space",
