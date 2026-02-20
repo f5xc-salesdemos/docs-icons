@@ -23,7 +23,7 @@ import F5Icon from '@f5xc-salesdemos/icons-f5-brand/Icon.astro';
 ## Props
 
 | Prop | Type | Default | Description |
-|------|------|---------|-------------|
+| ------ | ------ | --------- | ------------- |
 | `name` | `string` | — | **Required.** Icon name (see `icons.json` for available names) |
 | `size` | `string` | `'1.5em'` | Width and height of the icon |
 | `label` | `string` | — | Accessible label. When set, icon gets `role="img"` and `aria-label` |

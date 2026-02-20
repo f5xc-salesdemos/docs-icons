@@ -92,7 +92,7 @@ const output = {
   icons,
 };
 
-writeFileSync(outFile, JSON.stringify(output, null, 2));
+writeFileSync(outFile, JSON.stringify(output, null, 2) + '\n');
 
 console.log(`Built ${Object.keys(icons).length} icons → ${outFile}`);
 if (customCount > 0) {

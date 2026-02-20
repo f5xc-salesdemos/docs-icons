@@ -28,12 +28,12 @@ jobs:
             local max_attempts=$1; shift
             local delay=$1; shift
             local attempt=1
-            while [ $attempt -le $max_attempts ]; do
+            while [ "$attempt" -le "$max_attempts" ]; do
               echo "Attempt $attempt/$max_attempts: $*"
               if "$@"; then
                 return 0
               fi
-              if [ $attempt -eq $max_attempts ]; then
+              if [ "$attempt" -eq "$max_attempts" ]; then
                 echo "All $max_attempts attempts failed"
                 return 1
               fi
@@ -53,12 +53,12 @@ jobs:
             local max_attempts=$1; shift
             local delay=$1; shift
             local attempt=1
-            while [ $attempt -le $max_attempts ]; do
+            while [ "$attempt" -le "$max_attempts" ]; do
               echo "Attempt $attempt/$max_attempts: $*"
               if "$@"; then
                 return 0
               fi
-              if [ $attempt -eq $max_attempts ]; then
+              if [ "$attempt" -eq "$max_attempts" ]; then
                 echo "All $max_attempts attempts failed"
                 return 1
               fi
@@ -96,7 +96,7 @@ jobs:
               echo "Verifying $name@$version is available on registry..."
               local attempt=1 max_attempts=10 delay=5
               local found=false
-              while [ $attempt -le $max_attempts ]; do
+              while [ "$attempt" -le "$max_attempts" ]; do
                 if [ "$(npm view "$name@$version" version 2>/dev/null || echo "")" = "$version" ]; then
                   echo "Confirmed $name@$version is available"
                   found=true
@@ -105,7 +105,7 @@ jobs:
                 echo "Not yet available (attempt $attempt/$max_attempts), waiting ${delay}s..."
                 sleep $delay
                 delay=$((delay * 2))
-                if [ $delay -gt 60 ]; then delay=60; fi
+                if [ "$delay" -gt 60 ]; then delay=60; fi
                 attempt=$((attempt + 1))
               done
               if [ "$found" = false ]; then
@@ -113,7 +113,7 @@ jobs:
                 failures=$((failures + 1))
               fi
             done < "$NEWLY_PUBLISHED"
-            if [ $failures -gt 0 ]; then
+            if [ "$failures" -gt 0 ]; then
               echo "ERROR: $failures package(s) failed verification"
               return 1
             fi
