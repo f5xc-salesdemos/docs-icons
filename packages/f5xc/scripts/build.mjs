@@ -11,29 +11,31 @@
  * - Reads viewBox dimensions from the <svg> element
  */
 
-import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
-import { join, basename, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { readFileSync, writeFileSync, readdirSync } from "node:fs";
+import { join, basename, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const svgDir = join(__dirname, '..', 'svg');
-const outFile = join(__dirname, '..', 'icons.json');
+const svgDir = join(__dirname, "..", "svg");
+const outFile = join(__dirname, "..", "icons.json");
 
-const files = readdirSync(svgDir).filter((f) => f.endsWith('.svg')).sort();
+const files = readdirSync(svgDir)
+  .filter((f) => f.endsWith(".svg"))
+  .sort();
 
 const icons = {};
 const skipped = [];
 
 for (const file of files) {
   // Derive icon name: strip .svg, then clean up size suffixes
-  let name = basename(file, '.svg');
+  let name = basename(file, ".svg");
 
   // Remove size suffixes: -24x24, _24_x_24, -464-384, etc.
-  name = name.replace(/[-_]\d+[-x_]+\d+$/i, '');
+  name = name.replace(/[-_]\d+[-x_]+\d+$/i, "");
   // Remove trailing -image if present (e.g. platform-image)
-  name = name.replace(/-image$/, '');
+  name = name.replace(/-image$/, "");
 
-  const raw = readFileSync(join(svgDir, file), 'utf8');
+  const raw = readFileSync(join(svgDir, file), "utf8");
 
   // Extract viewBox dimensions
   const viewBoxMatch = raw.match(/viewBox="([^"]+)"/);
@@ -78,11 +80,14 @@ for (const file of files) {
   // Body extraction strips the root <svg fill="none">, so elements that relied on
   // inheriting fill="none" would incorrectly get fill="currentColor" from BaseIcon.
   if (/<svg[^>]*\bfill="none"/.test(raw)) {
-    body = body.replace(/<(path|rect|circle|ellipse|polygon|polyline|line)\b([^>]*?)(\s*\/?>)/gi, (match, tag, attrs, close) => {
-      if (/\bfill\s*=/.test(attrs)) return match;
-      if (!/\bstroke\s*=/.test(attrs)) return match;
-      return `<${tag}${attrs} fill="none"${close}`;
-    });
+    body = body.replace(
+      /<(path|rect|circle|ellipse|polygon|polyline|line)\b([^>]*?)(\s*\/?>)/gi,
+      (match, tag, attrs, close) => {
+        if (/\bfill\s*=/.test(attrs)) return match;
+        if (!/\bstroke\s*=/.test(attrs)) return match;
+        return `<${tag}${attrs} fill="none"${close}`;
+      },
+    );
   }
 
   // If icon name already exists (e.g. platform from platform.svg and platform-image-464-384.svg),
@@ -96,15 +101,15 @@ for (const file of files) {
 }
 
 const output = {
-  prefix: 'f5xc',
+  prefix: "f5xc",
   width: 40,
   height: 40,
   icons,
 };
 
-writeFileSync(outFile, JSON.stringify(output, null, 2) + '\n');
+writeFileSync(outFile, JSON.stringify(output, null, 2) + "\n");
 
 console.log(`Built ${Object.keys(icons).length} icons → ${outFile}`);
 if (skipped.length > 0) {
-  console.log(`Skipped ${skipped.length}: ${skipped.join(', ')}`);
+  console.log(`Skipped ${skipped.length}: ${skipped.join(", ")}`);
 }

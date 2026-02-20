@@ -38,7 +38,7 @@ jobs:
                 return 1
               fi
               echo "Waiting ${delay}s before retry..."
-              sleep $delay
+              sleep "$delay"
               delay=$((delay * 2))
               attempt=$((attempt + 1))
             done
@@ -63,7 +63,7 @@ jobs:
                 return 1
               fi
               echo "Waiting ${delay}s before retry..."
-              sleep $delay
+              sleep "$delay"
               delay=$((delay * 2))
               attempt=$((attempt + 1))
             done
@@ -103,7 +103,7 @@ jobs:
                   break
                 fi
                 echo "Not yet available (attempt $attempt/$max_attempts), waiting ${delay}s..."
-                sleep $delay
+                sleep "$delay"
                 delay=$((delay * 2))
                 if [ "$delay" -gt 60 ]; then delay=60; fi
                 attempt=$((attempt + 1))

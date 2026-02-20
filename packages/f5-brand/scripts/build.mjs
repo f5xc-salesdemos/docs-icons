@@ -11,35 +11,37 @@
  * - Reads viewBox dimensions from the <svg> element
  */
 
-import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
-import { join, basename, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { readFileSync, writeFileSync, readdirSync } from "node:fs";
+import { join, basename, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const svgDir = join(__dirname, '..', 'svg');
-const outFile = join(__dirname, '..', 'icons.json');
+const svgDir = join(__dirname, "..", "svg");
+const outFile = join(__dirname, "..", "icons.json");
 
-const files = readdirSync(svgDir).filter((f) => f.endsWith('.svg')).sort();
+const files = readdirSync(svgDir)
+  .filter((f) => f.endsWith(".svg"))
+  .sort();
 
 const icons = {};
 const skipped = [];
 
 for (const file of files) {
   // Skip bare ai-governance.svg — collides with f5-icon-ai-governance.svg
-  if (file === 'ai-governance.svg') {
+  if (file === "ai-governance.svg") {
     skipped.push(file);
     continue;
   }
 
   // Derive icon name: strip f5-icon- or f5- prefix, remove .svg extension
-  let name = basename(file, '.svg');
-  if (name.startsWith('f5-icon-')) {
-    name = name.slice('f5-icon-'.length);
-  } else if (name.startsWith('f5-')) {
-    name = name.slice('f5-'.length);
+  let name = basename(file, ".svg");
+  if (name.startsWith("f5-icon-")) {
+    name = name.slice("f5-icon-".length);
+  } else if (name.startsWith("f5-")) {
+    name = name.slice("f5-".length);
   }
 
-  const raw = readFileSync(join(svgDir, file), 'utf8');
+  const raw = readFileSync(join(svgDir, file), "utf8");
 
   // Extract viewBox dimensions
   const viewBoxMatch = raw.match(/viewBox="([^"]+)"/);
@@ -82,15 +84,15 @@ for (const file of files) {
 }
 
 const output = {
-  prefix: 'f5-brand',
+  prefix: "f5-brand",
   width: 50,
   height: 50,
   icons,
 };
 
-writeFileSync(outFile, JSON.stringify(output, null, 2) + '\n');
+writeFileSync(outFile, JSON.stringify(output, null, 2) + "\n");
 
 console.log(`Built ${Object.keys(icons).length} icons → ${outFile}`);
 if (skipped.length > 0) {
-  console.log(`Skipped ${skipped.length}: ${skipped.join(', ')}`);
+  console.log(`Skipped ${skipped.length}: ${skipped.join(", ")}`);
 }
