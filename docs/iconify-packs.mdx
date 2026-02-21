@@ -1,26 +1,21 @@
 ---
-title: Iconify
-description: Curated reference for Material Design, Carbon, Phosphor, and Tabler icon packs available via Icon components.
+title: Iconify Packs Overview
+description: Overview of Material Design, Carbon, Phosphor, and Tabler icon packs — comparison, shared usage patterns, and links to individual pack pages.
 sidebar:
-  label: Iconify
-  order: 6
+  label: Iconify Overview
+  order: 10
 ---
-
-import MdiIcon from '@f5xc-salesdemos/icons-mdi/Icon.astro';
-import CarbonIcon from '@f5xc-salesdemos/icons-carbon/Icon.astro';
-import PhIcon from '@f5xc-salesdemos/icons-phosphor/Icon.astro';
-import TablerIcon from '@f5xc-salesdemos/icons-tabler/Icon.astro';
 
 Multiple Iconify icon packs are available as npm packages with Astro `Icon` components. Each pack has its own import and uses the same `name`-based API.
 
 ## Pack Comparison
 
-| Pack | Prefix | Icons | Style | Best For |
-|------|--------|-------|-------|----------|
-| Material Design | `mdi` | 7,000+ | Filled + outlined | General-purpose, broadest coverage |
-| Carbon | `carbon` | ~1,500 | Outlined | Enterprise/IBM design, clean lines |
-| Phosphor | `ph` | ~1,200 | Multiple weights | Flexible weight options (thin to fill) |
-| Tabler | `tabler` | ~4,500 | Stroke-based | Crisp line icons, consistent stroke |
+| Pack | Prefix | Icons | Style | Best For | Page |
+|------|--------|-------|-------|----------|------|
+| Material Design | `mdi` | 7,638 | Filled + outlined | General-purpose, broadest coverage | [Material Design](/mdi/) |
+| Carbon | `carbon` | 2,582 | Outlined | Enterprise/IBM design, clean lines | [Carbon](/carbon/) |
+| Phosphor | `ph` | 9,161 | Multiple weights | Flexible weight options (thin to fill) | [Phosphor](/phosphor/) |
+| Tabler | `tabler` | 6,034 | Stroke-based | Crisp line icons, consistent stroke | [Tabler](/tabler/) |
 
 ## Usage
 
@@ -42,113 +37,11 @@ import TablerIcon from '@f5xc-salesdemos/icons-tabler/Icon.astro';
 
 Icons render as inline SVGs using `currentColor` — they automatically adapt to light and dark mode.
 
-## Material Design Icons (mdi)
+## Choosing a Pack
 
-The largest icon pack with 7,000+ icons covering virtually every use case.
+- **Broadest coverage**: Material Design Icons has the most icons (7,638) with filled and outlined variants for virtually every use case.
+- **Enterprise design**: Carbon follows IBM's design language with clean, consistent outlines suited for business applications.
+- **Weight flexibility**: Phosphor provides six weight variants (thin, light, regular, bold, fill, duotone) for fine-tuning visual weight.
+- **Consistent strokes**: Tabler uses a uniform 2px stroke width across all 6,034 icons for a cohesive look.
 
-<div class="not-content icon-grid" style="grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));">
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="database" size="1.5rem" /></div><div class="icon-card-label">database</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="cloud" size="1.5rem" /></div><div class="icon-card-label">cloud</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="server" size="1.5rem" /></div><div class="icon-card-label">server</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="shield-lock" size="1.5rem" /></div><div class="icon-card-label">shield-lock</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="fire" size="1.5rem" /></div><div class="icon-card-label">fire</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="account" size="1.5rem" /></div><div class="icon-card-label">account</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="cog" size="1.5rem" /></div><div class="icon-card-label">cog</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="chart-bar" size="1.5rem" /></div><div class="icon-card-label">chart-bar</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="network" size="1.5rem" /></div><div class="icon-card-label">network</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="lock" size="1.5rem" /></div><div class="icon-card-label">lock</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="key" size="1.5rem" /></div><div class="icon-card-label">key</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="web" size="1.5rem" /></div><div class="icon-card-label">web</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="api" size="1.5rem" /></div><div class="icon-card-label">api</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="dns" size="1.5rem" /></div><div class="icon-card-label">dns</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="kubernetes" size="1.5rem" /></div><div class="icon-card-label">kubernetes</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="docker" size="1.5rem" /></div><div class="icon-card-label">docker</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="terraform" size="1.5rem" /></div><div class="icon-card-label">terraform</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="console" size="1.5rem" /></div><div class="icon-card-label">console</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="memory" size="1.5rem" /></div><div class="icon-card-label">memory</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="monitor-dashboard" size="1.5rem" /></div><div class="icon-card-label">monitor-dashboard</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="robot" size="1.5rem" /></div><div class="icon-card-label">robot</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="earth" size="1.5rem" /></div><div class="icon-card-label">earth</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="lan" size="1.5rem" /></div><div class="icon-card-label">lan</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="access-point" size="1.5rem" /></div><div class="icon-card-label">access-point</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="alert" size="1.5rem" /></div><div class="icon-card-label">alert</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="check-circle" size="1.5rem" /></div><div class="icon-card-label">check-circle</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="code-tags" size="1.5rem" /></div><div class="icon-card-label">code-tags</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="file-document" size="1.5rem" /></div><div class="icon-card-label">file-document</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="github" size="1.5rem" /></div><div class="icon-card-label">github</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><MdiIcon name="lightning-bolt" size="1.5rem" /></div><div class="icon-card-label">lightning-bolt</div></div>
-</div>
-
-Browse all: [Iconify MDI explorer](https://icon-sets.iconify.design/mdi/)
-
-## Carbon Icons (carbon)
-
-IBM's enterprise design language with ~1,500 clean, outlined icons.
-
-<div class="not-content icon-grid" style="grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));">
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><CarbonIcon name="cloud" size="1.5rem" /></div><div class="icon-card-label">cloud</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><CarbonIcon name="security" size="1.5rem" /></div><div class="icon-card-label">security</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><CarbonIcon name="network-3" size="1.5rem" /></div><div class="icon-card-label">network-3</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><CarbonIcon name="data-base" size="1.5rem" /></div><div class="icon-card-label">data-base</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><CarbonIcon name="application" size="1.5rem" /></div><div class="icon-card-label">application</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><CarbonIcon name="api" size="1.5rem" /></div><div class="icon-card-label">api</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><CarbonIcon name="dashboard" size="1.5rem" /></div><div class="icon-card-label">dashboard</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><CarbonIcon name="terminal" size="1.5rem" /></div><div class="icon-card-label">terminal</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><CarbonIcon name="code" size="1.5rem" /></div><div class="icon-card-label">code</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><CarbonIcon name="user" size="1.5rem" /></div><div class="icon-card-label">user</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><CarbonIcon name="settings" size="1.5rem" /></div><div class="icon-card-label">settings</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><CarbonIcon name="document" size="1.5rem" /></div><div class="icon-card-label">document</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><CarbonIcon name="earth" size="1.5rem" /></div><div class="icon-card-label">earth</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><CarbonIcon name="warning" size="1.5rem" /></div><div class="icon-card-label">warning</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><CarbonIcon name="checkmark" size="1.5rem" /></div><div class="icon-card-label">checkmark</div></div>
-</div>
-
-Browse all: [Iconify Carbon explorer](https://icon-sets.iconify.design/carbon/)
-
-## Phosphor Icons (ph)
-
-~1,200 icons with flexible weight options — thin, light, regular, bold, fill, and duotone.
-
-<div class="not-content icon-grid" style="grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));">
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><PhIcon name="globe" size="1.5rem" /></div><div class="icon-card-label">globe</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><PhIcon name="shield" size="1.5rem" /></div><div class="icon-card-label">shield</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><PhIcon name="cloud" size="1.5rem" /></div><div class="icon-card-label">cloud</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><PhIcon name="database" size="1.5rem" /></div><div class="icon-card-label">database</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><PhIcon name="lock" size="1.5rem" /></div><div class="icon-card-label">lock</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><PhIcon name="user" size="1.5rem" /></div><div class="icon-card-label">user</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><PhIcon name="gear" size="1.5rem" /></div><div class="icon-card-label">gear</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><PhIcon name="code" size="1.5rem" /></div><div class="icon-card-label">code</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><PhIcon name="terminal-window" size="1.5rem" /></div><div class="icon-card-label">terminal-window</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><PhIcon name="rocket" size="1.5rem" /></div><div class="icon-card-label">rocket</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><PhIcon name="lightning" size="1.5rem" /></div><div class="icon-card-label">lightning</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><PhIcon name="chart-bar" size="1.5rem" /></div><div class="icon-card-label">chart-bar</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><PhIcon name="file" size="1.5rem" /></div><div class="icon-card-label">file</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><PhIcon name="warning" size="1.5rem" /></div><div class="icon-card-label">warning</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><PhIcon name="check-circle" size="1.5rem" /></div><div class="icon-card-label">check-circle</div></div>
-</div>
-
-Browse all: [Iconify Phosphor explorer](https://icon-sets.iconify.design/ph/)
-
-## Tabler Icons (tabler)
-
-~4,500 crisp line icons with consistent 2px stroke width.
-
-<div class="not-content icon-grid" style="grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));">
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><TablerIcon name="shield" size="1.5rem" /></div><div class="icon-card-label">shield</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><TablerIcon name="cloud" size="1.5rem" /></div><div class="icon-card-label">cloud</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><TablerIcon name="database" size="1.5rem" /></div><div class="icon-card-label">database</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><TablerIcon name="server" size="1.5rem" /></div><div class="icon-card-label">server</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><TablerIcon name="network" size="1.5rem" /></div><div class="icon-card-label">network</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><TablerIcon name="lock" size="1.5rem" /></div><div class="icon-card-label">lock</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><TablerIcon name="key" size="1.5rem" /></div><div class="icon-card-label">key</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><TablerIcon name="code" size="1.5rem" /></div><div class="icon-card-label">code</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><TablerIcon name="terminal" size="1.5rem" /></div><div class="icon-card-label">terminal</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><TablerIcon name="world" size="1.5rem" /></div><div class="icon-card-label">world</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><TablerIcon name="user" size="1.5rem" /></div><div class="icon-card-label">user</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><TablerIcon name="settings" size="1.5rem" /></div><div class="icon-card-label">settings</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><TablerIcon name="rocket" size="1.5rem" /></div><div class="icon-card-label">rocket</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><TablerIcon name="bolt" size="1.5rem" /></div><div class="icon-card-label">bolt</div></div>
-  <div class="icon-card"><div class="icon-card-image" style="display:flex;align-items:center;justify-content:center;padding:0.75rem;"><TablerIcon name="chart-bar" size="1.5rem" /></div><div class="icon-card-label">chart-bar</div></div>
-</div>
-
-Browse all: [Iconify Tabler explorer](https://icon-sets.iconify.design/tabler/)
+See each pack's dedicated page for curated icon grids and browsing links.
