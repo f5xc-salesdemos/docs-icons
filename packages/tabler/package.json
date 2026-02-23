@@ -14,7 +14,7 @@
     "icons.json"
   ],
   "dependencies": {
-    "@iconify-json/tabler": "^1.2.0"
+    "@iconify-json/tabler": "^1.2.27"
   },
   "publishConfig": {
     "access": "public"
