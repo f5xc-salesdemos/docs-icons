@@ -14,7 +14,7 @@
     "icons.json"
   ],
   "dependencies": {
-    "@iconify-json/simple-icons": "^1"
+    "@iconify-json/simple-icons": "^1.2.76"
   },
   "publishConfig": {
     "access": "public"
